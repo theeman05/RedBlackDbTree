@@ -2,6 +2,8 @@
 
 <div align="center">
 	A declarative Red Black Tree Module for Roblox Lua.
+	
+	Please note: This is my first in-depth GitHub and is a work in progress.
 </div>
 
 <div>&nbsp;</div>
