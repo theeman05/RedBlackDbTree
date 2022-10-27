@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#constructors" class="md-skip">
+        <a href="#summary" class="md-skip">
           Skip to content
         </a>
       
@@ -360,6 +360,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#constructors" class="md-nav__link">
     Constructors
   </a>
@@ -380,7 +400,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#methods_1" class="md-nav__link">
     Methods
   </a>
   
@@ -565,6 +585,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#constructors" class="md-nav__link">
     Constructors
   </a>
@@ -585,7 +625,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#methods_1" class="md-nav__link">
     Methods
   </a>
   
@@ -759,6 +799,71 @@
 
   <h1>API Reference</h1>
 
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>RedBlackDbTree is a utility module allowing sorting of objects based on their natural order or a given comparator. </p>
+<p>RedBlackDbTree has a special function called <a href="#redblackdbtreenew">RedBlackDbTree.new()</a> which is used to <a href="../guide/implimentation">instantiate</a> a new RedBlackDbTree Instance. This function can take a comparator as a parameter to compare and sort objects by. </p>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span><a href="#add">Add</a>(object: any): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Adds the given object to the tree, if it isn't already in the tree.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#addall">AddAll</a>(...): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Adds the given objects to the tree using <a href="#add">Add</a>.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#remove">Remove</a>(object: any): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Removes the given object from the tree, if it is present in the tree.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#removeall">RemoveAll</a>(...): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Removes the given objects to the tree using <a href="#remove">Remove</a>.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#containsobject">ContainsObject</a>(object): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Returns true if the tree contains the given object, false otherwise.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#updateobject">UpdateObject</a>(object, dict{[property] = update}): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Applies the updates given in the dictionary to the object.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#clear">Clear</a>(): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Removes all objects from the tree, making it empty.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#isempty">IsEmpty</a>(): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Returns true if the tree is empty, false otherwise.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#height">Height</a>(): number</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Returns the height of the tree. A one-node tree has height 0.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#__len">__len</a>(): number</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Returns the number of non-nil nodes in the tree accesed by the # size operator.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#min">Min</a>(): object</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Returns smallest object in the tree</p>
+<div class="highlight"><pre><span></span><code><span><a href="#max">Max</a>(): object</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Returns largest object in the tree</p>
+<div class="highlight"><pre><span></span><code><span><a href="#removemin">RemoveMin</a>(): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Removes the smallest object from the tree.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#removemax">RemoveMax</a>(): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Removes the largest object from the tree.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#preorderarray">PreOrderArray</a>(): {object}</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Returns a new array of the tree's objects in pre-order format.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#inorderarray">InOrderArray</a>(): {object}</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Returns a new array of the tree's objects in the in-order format.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#postorderarray">PostOrderArray</a>(): {object}</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Returns a new array of the tree's objects in post-order format.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#preorderprint">PreOrderPrint</a>(): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Prints the tree's objects in pre-order format.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#inorderprint">InOrderPrint</a>(): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Prints the tree's objects in the in-order format.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#postorderprint">PostOrderPrint</a>(): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Prints the tree's objects in post-order format.</p>
+<hr />
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="redblackdbtreenew">RedBlackDbTree.new<a class="headerlink" href="#redblackdbtreenew" title="Permanent link">&para;</a></h3>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">RedBlackDbTree</span><span class="o">.</span><span class="k">new</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">RedBlackDBTree</span>
@@ -769,7 +874,7 @@ Creates a new, empty RedBlackDbTree using the natural ordering of its objects. <
 <p>The only objects who may be sorted by the default comparator are Strings, numbers or Metatables with comparison methods.</p>
 </div>
 <hr />
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">RedBlackDbTree</span><span class="o">.</span><span class="k">new</span><span class="p">(</span><span class="n">comparator</span> <span class="p">:</span> <span class="p">(</span><span class="n">object1</span><span class="p">,</span> <span class="n">object2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">number</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RedBlackDbTree</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">RedBlackDbTree</span><span class="o">.</span><span class="k">new</span><span class="p">(</span><span class="n">comparator</span><span class="p">:</span> <span class="p">(</span><span class="n">object1</span><span class="p">,</span> <span class="n">object2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">number</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RedBlackDbTree</span>
 </code></pre></div>
 Creates a new, empty RedBlackDbTree, ordered according to the given <code>comparator</code>.</p>
 <p>The comparator should take two arguments representing the objects passed into it. The main 3 cases are listed below:</p>
@@ -785,19 +890,19 @@ Creates a new, empty RedBlackDbTree, ordered according to the given <code>compar
 </li>
 </ul>
 <hr />
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p><code>self</code> is an active RedBlackDbTree Instance.</p>
 </div>
 <h3 id="add">Add<a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Add</span><span class="p">(</span><span class="k">object</span> <span class="p">:</span> <span class="k">any</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Add</span><span class="p">(</span><span class="k">object</span><span class="p">:</span> <span class="k">any</span><span class="p">)</span>
 </code></pre></div>
 Adds <code>object</code> to the tree, given it is not in the array already.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>If <code>object</code> is mutable, it must be updated using <code>UpdateObject</code>.
-Alternatively, the object can be removed, updated then added back in.</p>
+<p>If <code>object</code> is mutable, it must be updated using <code>UpdateObject</code>.</p>
+<p>Alternatively, the object can be removed, updated then added back in.</p>
 </div>
 <hr />
 <h3 id="addall">AddAll<a class="headerlink" href="#addall" title="Permanent link">&para;</a></h3>
@@ -807,7 +912,7 @@ Adds all the given objects in the tuple <code>...</code></p>
 <p>If one object is given, it is assumed to be a table in which all values will be added.</p>
 <hr />
 <h3 id="remove">Remove<a class="headerlink" href="#remove" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Remove</span><span class="p">(</span><span class="k">object</span> <span class="p">:</span> <span class="k">any</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Remove</span><span class="p">(</span><span class="k">object</span><span class="p">:</span> <span class="k">any</span><span class="p">)</span>
 </code></pre></div>
 Removes <code>object</code> from the tree.</p>
 <hr />
@@ -823,10 +928,12 @@ Removes all the given objects in the tuple <code>...</code></p>
 Returns true if the tree contains <code>object</code>, false otherwise.</p>
 <hr />
 <h3 id="updateobject">UpdateObject<a class="headerlink" href="#updateobject" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">UpdateObject</span><span class="p">(</span><span class="k">object</span><span class="p">,</span> <span class="n">dict</span> <span class="p">:</span> <span class="p">{[</span><span class="k">property</span><span class="p">]</span> <span class="o">=</span> <span class="n">update</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">UpdateObject</span><span class="p">(</span><span class="k">object</span><span class="p">,</span> <span class="n">dict</span><span class="p">:</span> <span class="p">{[</span><span class="k">property</span><span class="p">]</span> <span class="o">=</span> <span class="n">update</span><span class="p">})</span>
 </code></pre></div>
-- Removes the <code>object</code> from the tree</p>
 <ul>
+<li>
+<p>Removes the <code>object</code> from the tree</p>
+</li>
 <li>
 <p>Applies the <code>update</code> to the <code>property</code> of the <code>object</code> for all properties in <code>dict</code></p>
 </li>
@@ -880,7 +987,7 @@ Returns the largest object in the tree.</p>
 <h3 id="removemin">RemoveMin<a class="headerlink" href="#removemin" title="Permanent link">&para;</a></h3>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">RemoveMin</span><span class="p">()</span>
 </code></pre></div>
-Removes the "smallest" object from the tree.</p>
+Removes the smallest object from the tree.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>An error will be produced if there are no objects in the tree.</p>
@@ -889,7 +996,7 @@ Removes the "smallest" object from the tree.</p>
 <h3 id="removemax">RemoveMax<a class="headerlink" href="#removemax" title="Permanent link">&para;</a></h3>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">RemoveMax</span><span class="p">()</span>
 </code></pre></div>
-Removes the "largest" object from the tree</p>
+Removes the largest object from the tree</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>An error will be produced if there are no objects in the tree.</p>
