@@ -6,6 +6,10 @@
 
 <div>&nbsp;</div>
 
+<div align="center">
+Please note: This is my first in-depth GitHub and is a work in progress.
+</div>
+
 ## Installation
 
 ### Method 1: Roblox's built in `require` method
