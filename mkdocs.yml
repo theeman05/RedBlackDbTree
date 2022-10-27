@@ -1,0 +1,32 @@
+site_name: RedBlackDbTree Documentation
+site_url: https://theeman05.github.io/RedBlackDbTree
+repo_name: theeman05/School-Projects/RedBlackDbTree
+repo_url: https://github.com/theeman05/School-Projects/tree/main/Personal/RedBlackDbTree
+
+theme:
+  name: material
+  highlightjs: true
+  hljs_style: github-dark
+  palette:
+    scheme: slate
+    primary: deep orange
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+- Home: index.md
+- Guides:
+  - Installation: installation.md
+  - Implimentation: implimentation.md
+  - Array Retrieval: array-retrieval.md
+  - Custom Comparator: custom-comparator.md
+  - Mutable Objects: mutable-objects.md
+- API Reference: api-reference.md
