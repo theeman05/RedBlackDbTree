@@ -1,7 +1,7 @@
 site_name: RedBlackDbTree Documentation
-site_url: https://theeman05.github.io/RedBlackDbTree
-repo_name: theeman05/School-Projects/RedBlackDbTree
-repo_url: https://github.com/theeman05/School-Projects/tree/main/Personal/RedBlackDbTree
+site_url: https://theeman05.github.io/RedBlackDbTree/
+repo_name: theeman05/RedBlackDbTree
+repo_url: https://github.com/theeman05/RedBlackDbTree
 
 theme:
   name: material
@@ -23,10 +23,10 @@ markdown_extensions:
 
 nav:
 - Home: index.md
-- Guides:
-  - Installation: installation.md
-  - Implimentation: implimentation.md
-  - Array Retrieval: array-retrieval.md
-  - Custom Comparator: custom-comparator.md
-  - Mutable Objects: mutable-objects.md
+- Guide:
+  - Installation: guide/installation.md
+  - Implimentation: guide/implimentation.md
+  - Array Retrieval: guide/array-retrieval.md
+  - Custom Comparator: guide/custom-comparator.md
+  - Mutable Objects: guide/mutable-objects.md
 - API Reference: api-reference.md

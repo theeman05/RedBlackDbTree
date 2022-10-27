@@ -14,12 +14,12 @@
 
 ### Method 2: Model File (Roblox Studio)
 
-- Download the rbxm model file from the [RedBlackDbTree GitHub](https://github.com/theeman05/School-Projects/tree/main/Personal/RedBlackDbTree)
+- Download the rbxm model file from the [RedBlackDbTree GitHub](https://github.com/theeman05/RedBlackDbTree)
 
 - Insert the model into Roblox Studio in a place like `ReplicatedStorage`
 
-## [Documentation](https://theeman05.github.io/RedBlackDbTree)
-For a more detailed guide and examples, visit [the official RedBlackDbTree documentation](https://theeman05.github.io/RedBlackDbTree).
+## [Documentation](https://theeman05.github.io/RedBlackDbTree/)
+For a more detailed guide and examples, visit [the official RedBlackDbTree documentation](https://theeman05.github.io/RedBlackDbTree/).
 
 ```lua
 local RedBlackDbTree = require(11328824364) -- Impliment the module
