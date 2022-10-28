@@ -35,3 +35,6 @@ tree:Remove(109) -- Remove an object
 
 tree:InOrderPrint()
 ```
+
+## License
+RedBlackDbTree is available under the Apache 2.0 License. See [LICENSE.md](https://github.com/theeman05/RedBlackDbTree/blob/main/LICENSE.md) for details.
