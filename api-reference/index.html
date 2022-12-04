@@ -1,4 +1,7 @@
 
+
+
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -7,11 +10,11 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-      
         <link rel="canonical" href="https://theeman05.github.io/RedBlackDbTree/api-reference/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-5.5.14">
     
     
       
@@ -19,35 +22,28 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.d3202873.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ff6e42">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ff0a5ce4.min.css">
       
-      
-
-    
-    
-    
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <meta name="theme-color" content="#ff6e42">
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
     
+    
+    
+    
+      
     
     
   </head>
@@ -56,11 +52,8 @@
     
     
     
-    
-    
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="">
   
-    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -77,58 +70,48 @@
       
     </div>
     
-    
-      
-
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="RedBlackDbTree Documentation" class="md-header__button md-logo" aria-label="RedBlackDbTree Documentation" data-md-component="logo">
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://theeman05.github.io/RedBlackDbTree/" title="RedBlackDbTree Documentation" class="md-header-nav__button md-logo" aria-label="RedBlackDbTree Documentation">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             RedBlackDbTree Documentation
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             
               API Reference
             
           </span>
         </div>
-      </div>
+      
     </div>
     
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+<div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -144,11 +127,12 @@
 </div>
     
     
-      <div class="md-header__source">
-        <a href="https://github.com/theeman05/RedBlackDbTree" title="Go to repository" class="md-source" data-md-component="source">
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/theeman05/RedBlackDbTree" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     theeman05/RedBlackDbTree
@@ -157,43 +141,39 @@
       </div>
     
   </nav>
-  
 </header>
     
     <div class="md-container" data-md-component="container">
       
-      
         
-          
+      
+      
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="RedBlackDbTree Documentation" class="md-nav__button md-logo" aria-label="RedBlackDbTree Documentation" data-md-component="logo">
+    <a href="https://theeman05.github.io/RedBlackDbTree/" title="RedBlackDbTree Documentation" class="md-nav__button md-logo" aria-label="RedBlackDbTree Documentation">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     RedBlackDbTree Documentation
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/theeman05/RedBlackDbTree" title="Go to repository" class="md-source" data-md-component="source">
+      
+<a href="https://github.com/theeman05/RedBlackDbTree" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     theeman05/RedBlackDbTree
@@ -207,149 +187,123 @@
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        Home
-      </a>
-    </li>
-  
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Guide" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Guide
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guide/installation/" class="md-nav__link">
-        Installation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guide/implimentation/" class="md-nav__link">
-        Implimentation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guide/array-retrieval/" class="md-nav__link">
-        Array Retrieval
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guide/custom-comparator/" class="md-nav__link">
-        Custom Comparator
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guide/mutable-objects/" class="md-nav__link">
-        Mutable Objects
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
-      
-      
-      
-
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          API Reference
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        API Reference
-      </a>
-      
+    <label class="md-nav__link" for="nav-2">
+      Guide
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+  <li class="md-nav__item">
+    <a href="../guide/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/implimentation/" title="Implimentation" class="md-nav__link">
+      Implimentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/array-retrieval/" title="Array Retrieval" class="md-nav__link">
+      Array Retrieval
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/custom-comparator/" title="Custom Comparator" class="md-nav__link">
+      Custom Comparator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/mutable-objects/" title="Mutable Objects" class="md-nav__link">
+      Mutable Objects
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="API Reference" class="md-nav__link md-nav__link--active">
+      API Reference
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -357,7 +311,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -436,6 +390,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#setcomparator" class="md-nav__link">
+    SetComparator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#containsobject" class="md-nav__link">
     ContainsObject
   </a>
@@ -452,6 +413,13 @@
           <li class="md-nav__item">
   <a href="#clear" class="md-nav__link">
     Clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    Refresh
   </a>
   
 </li>
@@ -555,9 +523,8 @@
     </ul>
   
 </nav>
-      
-    </li>
-  
+    
+  </li>
 
     
   </ul>
@@ -567,14 +534,11 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
   
   
   
@@ -582,7 +546,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -661,6 +625,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#setcomparator" class="md-nav__link">
+    SetComparator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#containsobject" class="md-nav__link">
     ContainsObject
   </a>
@@ -677,6 +648,13 @@
           <li class="md-nav__item">
   <a href="#clear" class="md-nav__link">
     Clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    Refresh
   </a>
   
 </li>
@@ -785,21 +763,21 @@
               </div>
             
           
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/theeman05/RedBlackDbTree/edit/master/docs/api-reference.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
                 
                   
-
-  <a href="https://github.com/theeman05/RedBlackDbTree/edit/master/docs/api-reference.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
-
-
-  <h1>API Reference</h1>
-
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+                
+                
+                  <h1>API Reference</h1>
+                
+                <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
 <p>RedBlackDbTree is a utility module allowing sorting of objects based on their natural order or a given comparator. </p>
 <p>RedBlackDbTree has a special function called <a href="#redblackdbtreenew">RedBlackDbTree.new()</a> which is used to <a href="../guide/implimentation">instantiate</a> a new RedBlackDbTree Instance. This function can take a comparator as a parameter to compare and sort objects by. </p>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
@@ -815,6 +793,9 @@
 <div class="highlight"><pre><span></span><code><span><a href="#removeall">RemoveAll</a>(...): nil</span>
 </code></pre></div>
 <p>&nbsp;&nbsp;Removes the given objects to the tree using <a href="#remove">Remove</a>.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#setcomparator">SetComparator</a>(comparator : (object1 : any, object2 : any) -> number): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Sets the comparator of the tree, and <a href="#refresh">refreshes</a> its contents. If no comparator is given, the comparator will be set to default.</p>
 <div class="highlight"><pre><span></span><code><span><a href="#containsobject">ContainsObject</a>(object): nil</span>
 </code></pre></div>
 <p>&nbsp;&nbsp;Returns true if the tree contains the given object, false otherwise.</p>
@@ -824,6 +805,9 @@
 <div class="highlight"><pre><span></span><code><span><a href="#clear">Clear</a>(): nil</span>
 </code></pre></div>
 <p>&nbsp;&nbsp;Removes all objects from the tree, making it empty.</p>
+<div class="highlight"><pre><span></span><code><span><a href="#refresh">Refresh</a>(): nil</span>
+</code></pre></div>
+<p>&nbsp;&nbsp;Completely refreshes the tree by <a href="#clear">clearing</a> its items, then re-inserting them.</p>
 <div class="highlight"><pre><span></span><code><span><a href="#isempty">IsEmpty</a>(): nil</span>
 </code></pre></div>
 <p>&nbsp;&nbsp;Returns true if the tree is empty, false otherwise.</p>
@@ -832,7 +816,7 @@
 <p>&nbsp;&nbsp;Returns the height of the tree. A one-node tree has height 0.</p>
 <div class="highlight"><pre><span></span><code><span><a href="#__len">__len</a>(): number</span>
 </code></pre></div>
-<p>&nbsp;&nbsp;Returns the number of non-nil nodes in the tree accessed by the # size operator.</p>
+<p>&nbsp;&nbsp;Returns the number of non-nil nodes in the tree accesed by the # size operator.</p>
 <div class="highlight"><pre><span></span><code><span><a href="#min">Min</a>(): object</span>
 </code></pre></div>
 <p>&nbsp;&nbsp;Returns smallest object in the tree</p>
@@ -922,13 +906,18 @@ Removes <code>object</code> from the tree.</p>
 Removes all the given objects in the tuple <code>...</code></p>
 <p>If one object is given, it is assumed to be a table in which all values will be removed.</p>
 <hr />
+<h3 id="setcomparator">SetComparator<a class="headerlink" href="#setcomparator" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">SetComparator</span><span class="p">(</span><span class="n">comparator</span> <span class="p">:</span> <span class="p">(</span><span class="n">object1</span> <span class="p">:</span> <span class="k">any</span><span class="p">,</span> <span class="n">object2</span> <span class="p">:</span> <span class="k">any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">number</span><span class="p">)</span>
+</code></pre></div>
+Sets the comparator of the tree, and <a href="#refresh">refreshes</a> its contents. If no comparator is given, the comparator will be set to default.</p>
+<hr />
 <h3 id="containsobject">ContainsObject<a class="headerlink" href="#containsobject" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">ContainsObject</span><span class="p">(</span><span class="k">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">boolean</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">ContainsObject</span><span class="p">(</span><span class="k">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">boolean</span>
 </code></pre></div>
 Returns true if the tree contains <code>object</code>, false otherwise.</p>
 <hr />
 <h3 id="updateobject">UpdateObject<a class="headerlink" href="#updateobject" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">UpdateObject</span><span class="p">(</span><span class="k">object</span><span class="p">,</span> <span class="n">dict</span><span class="p">:</span> <span class="p">{[</span><span class="k">property</span><span class="p">]</span> <span class="o">=</span> <span class="n">update</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">UpdateObject</span><span class="p">(</span><span class="k">object</span><span class="p">,</span> <span class="n">dict</span><span class="p">:</span> <span class="p">{[</span><span class="k">property</span><span class="p">]</span> <span class="o">=</span> <span class="n">update</span><span class="p">})</span>
 </code></pre></div>
 <ul>
 <li>
@@ -947,27 +936,32 @@ Returns true if the tree contains <code>object</code>, false otherwise.</p>
 </div>
 <hr />
 <h3 id="clear">Clear<a class="headerlink" href="#clear" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Clear</span><span class="p">()</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Clear</span><span class="p">()</span>
 </code></pre></div>
 Remove all objects from the tree, making it empty.</p>
 <hr />
+<h3 id="refresh">Refresh<a class="headerlink" href="#refresh" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Refresh</span><span class="p">()</span>
+</code></pre></div>
+Completely refreshes the tree by <a href="#clear">clearing</a> its items, then re-inserting them.</p>
+<hr />
 <h3 id="isempty">IsEmpty<a class="headerlink" href="#isempty" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">IsEmpty</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">boolean</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">IsEmpty</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">boolean</span>
 </code></pre></div>
 Returns true if the tree is empty, false otherwise.</p>
 <hr />
 <h3 id="height">Height<a class="headerlink" href="#height" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Height</span><span class="p">()</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Height</span><span class="p">()</span>
 </code></pre></div>
 Returns the height of the tree. A one-node tree has height 0.</p>
 <hr />
 <h3 id="__len">__len<a class="headerlink" href="#__len" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="ow">#</span><span class="bp">self</span> <span class="o">-&gt;</span> <span class="n">number</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="ow">#</span><span class="bp">self</span> <span class="o">-&gt;</span> <span class="n">number</span>
 </code></pre></div>
 Returns the number of non-nil nodes in the tree. <code>self</code> should be a RedBlackDbTree instance.</p>
 <hr />
 <h3 id="min">Min<a class="headerlink" href="#min" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Min</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">object</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Min</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">object</span>
 </code></pre></div>
 Returns the smallest object in the tree.</p>
 <div class="admonition caution">
@@ -976,7 +970,7 @@ Returns the smallest object in the tree.</p>
 </div>
 <hr />
 <h3 id="max">Max<a class="headerlink" href="#max" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Max</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">object</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Max</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">object</span>
 </code></pre></div>
 Returns the largest object in the tree.</p>
 <div class="admonition caution">
@@ -985,7 +979,7 @@ Returns the largest object in the tree.</p>
 </div>
 <hr />
 <h3 id="removemin">RemoveMin<a class="headerlink" href="#removemin" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">RemoveMin</span><span class="p">()</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">RemoveMin</span><span class="p">()</span>
 </code></pre></div>
 Removes the smallest object from the tree.</p>
 <div class="admonition caution">
@@ -994,7 +988,7 @@ Removes the smallest object from the tree.</p>
 </div>
 <hr />
 <h3 id="removemax">RemoveMax<a class="headerlink" href="#removemax" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">RemoveMax</span><span class="p">()</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">RemoveMax</span><span class="p">()</span>
 </code></pre></div>
 Removes the largest object from the tree</p>
 <div class="admonition caution">
@@ -1003,96 +997,98 @@ Removes the largest object from the tree</p>
 </div>
 <hr />
 <h3 id="preorderarray">PreOrderArray<a class="headerlink" href="#preorderarray" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">PreOrderArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="k">object</span><span class="p">}</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">PreOrderArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="k">object</span><span class="p">}</span>
 </code></pre></div>
 Returns a new array of the tree's objects in pre-order format.</p>
 <hr />
 <h3 id="inorderarray">InOrderArray<a class="headerlink" href="#inorderarray" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">InOrderArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="k">object</span><span class="p">}</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">InOrderArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="k">object</span><span class="p">}</span>
 </code></pre></div>
 Returns a new array of the tree's objects in the in-order format.</p>
 <hr />
 <h3 id="postorderarray">PostOrderArray<a class="headerlink" href="#postorderarray" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">PostOrderArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="k">object</span><span class="p">}</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">PostOrderArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="k">object</span><span class="p">}</span>
 </code></pre></div>
 Returns a new array of the tree's objects in post-order format.</p>
 <hr />
 <h3 id="preorderprint">PreOrderPrint<a class="headerlink" href="#preorderprint" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">PreOrderPrint</span><span class="p">()</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">PreOrderPrint</span><span class="p">()</span>
 </code></pre></div>
 Prints the tree's objects in pre-order format.</p>
 <hr />
 <h3 id="inorderprint">InOrderPrint<a class="headerlink" href="#inorderprint" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">InOrderPrint</span><span class="p">()</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">InOrderPrint</span><span class="p">()</span>
 </code></pre></div>
 Prints the tree's objects in the in-order format.</p>
 <hr />
 <h3 id="postorderprint">PostOrderPrint<a class="headerlink" href="#postorderprint" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">PostOrderPrint</span><span class="p">()</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">PostOrderPrint</span><span class="p">()</span>
 </code></pre></div>
 Prints the tree's objects in post-order format.</p>
-
-
-
-
-
                 
-              </article>
-            </div>
-          
-          
+              
+              
+                
+
+
+              
+            </article>
+          </div>
         </div>
-        
       </main>
       
-        <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
         
-        <a href="../guide/mutable-objects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mutable Objects" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Mutable Objects
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../guide/mutable-objects/" title="Mutable Objects" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-          </div>
-        </a>
-      
-      
-    </nav>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Mutable Objects
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
       
     </div>
   </div>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>
