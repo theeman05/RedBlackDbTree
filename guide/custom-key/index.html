@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://theeman05.github.io/RedBlackDbTree/guide/custom-comparator/">
+        <link rel="canonical" href="https://theeman05.github.io/RedBlackDbTree/guide/custom-key/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -18,7 +18,7 @@
     
     
       
-        <title>Custom Comparator - RedBlackDbTree Documentation</title>
+        <title>Custom Key - RedBlackDbTree Documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-a-custom-comparator" class="md-skip">
+        <a href="#creating-a-custom-key" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Custom Comparator
+              Custom Key
             
           </span>
         </div>
@@ -267,12 +267,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Custom Comparator
+        Custom Key
         <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Custom Comparator" class="md-nav__link md-nav__link--active">
-      Custom Comparator
+    <a href="./" title="Custom Key" class="md-nav__link md-nav__link--active">
+      Custom Key
     </a>
     
       
@@ -287,8 +287,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-a-custom-comparator" class="md-nav__link">
-    Create a custom comparator:
+  <a href="#creating-a-custom-key" class="md-nav__link">
+    Creating a custom key:
   </a>
   
 </li>
@@ -297,6 +297,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced-custom-key/" title="Advanced Custom Key" class="md-nav__link">
+      Advanced Custom Key
+    </a>
   </li>
 
         
@@ -351,8 +363,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-a-custom-comparator" class="md-nav__link">
-    Create a custom comparator:
+  <a href="#creating-a-custom-key" class="md-nav__link">
+    Creating a custom key:
   </a>
   
 </li>
@@ -369,7 +381,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/theeman05/RedBlackDbTree/edit/master/docs/guide/custom-comparator.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/theeman05/RedBlackDbTree/edit/master/docs/guide/custom-key.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -377,44 +389,43 @@
                   
                 
                 
-                  <h1>Custom Comparator</h1>
+                  <h1>Custom Key</h1>
                 
                 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Assuming we have already <a href="../implimentation/">implimented RedBlackDbTree</a> as <code>RedBlackDbTree</code></p>
 </div>
-<p>In this example, we create a custom comparator which sorts in decending order.</p>
-<h3 id="create-a-custom-comparator">Create a custom comparator:<a class="headerlink" href="#create-a-custom-comparator" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">tree</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kr">function</span> <span class="nf">decOrderComparator</span><span class="p">(</span><span class="n">object1</span><span class="p">,</span> <span class="n">object2</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="kr">if</span> <span class="n">object1</span> <span class="o">&gt;</span> <span class="n">object2</span> <span class="kr">then</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="kr">return</span> <span class="o">-</span><span class="mi">1</span> <span class="c1">-- object1 is larger than object2</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="kr">elseif</span> <span class="n">object1</span> <span class="o">&lt;</span> <span class="n">object2</span> <span class="kr">then</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="kr">return</span> <span class="mi">1</span>  <span class="c1">-- object1 is smaller than object2</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="kr">else</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="kr">return</span> <span class="mi">0</span>  <span class="c1">-- object1 is equal to object2</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="kr">end</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="kr">end</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">tree</span> <span class="o">=</span> <span class="n">RedBlackDbTree</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">decOrderComparator</span><span class="p">)</span> <span class="c1">-- Instantiate the tree with the comparator</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">tree</span><span class="p">:</span><span class="n">AddAll</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">109</span><span class="p">)</span> <span class="c1">-- Add objects into the tree</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">tree</span><span class="p">:</span><span class="n">AddAll</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">})</span> <span class="c1">-- We can alternatively add objects like this</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">tree</span><span class="p">:</span><span class="n">Remove</span><span class="p">(</span><span class="mi">109</span><span class="p">)</span> <span class="c1">-- Remove an object</span>
+<p>In this example, we create a custom key which identifies the sort order.</p>
+<h3 id="creating-a-custom-key">Creating a custom key:<a class="headerlink" href="#creating-a-custom-key" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- The list of our test items</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">local</span> <span class="n">groceryItems</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">{[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Cheese&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Price&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span><span class="p">},</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">{[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Ham&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Price&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span><span class="p">},</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="p">{[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Apple Pie&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Price&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span><span class="p">},</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="p">{[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Price&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">},</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="p">{[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Steak&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Price&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span><span class="p">}</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">-- Our key function first compares items by their price (descending), then their names (decending)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">-- Note that numbers may be made negative to invert sort order</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kr">function</span> <span class="nf">groceryKey</span><span class="p">(</span><span class="n">groceryItem</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="kr">return</span> <span class="o">-</span><span class="n">groceryItem</span><span class="p">.</span><span class="n">Price</span><span class="p">,</span> <span class="p">{[</span><span class="s2">&quot;Value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">groceryItem</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Descending&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">}</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="kr">end</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="kd">local</span> <span class="n">tree</span> <span class="o">=</span> <span class="n">RedBlackDbTree</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">groceryKey</span><span class="p">)</span> <span class="c1">-- Instantiate the tree with the key</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">tree</span><span class="p">:</span><span class="n">AddAll</span><span class="p">(</span><span class="n">groceryItems</span><span class="p">)</span> <span class="c1">-- Add objects into the tree</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">tree</span><span class="p">:</span><span class="n">InOrderPrint</span><span class="p">()</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1">-- Print the grocery data in order.</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="kr">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">groceryItem</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">tree</span><span class="p">:</span><span class="n">InOrderArray</span><span class="p">())</span> <span class="kr">do</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Item #&quot;</span><span class="o">..</span> <span class="n">idx</span><span class="o">..</span> <span class="s2">&quot; - Name: &quot;</span><span class="o">..</span> <span class="n">groceryItem</span><span class="p">.</span><span class="n">Name</span><span class="o">..</span> <span class="s2">&quot;, Price: $&quot;</span><span class="o">..</span> <span class="n">groceryItem</span><span class="p">.</span><span class="n">Price</span><span class="p">)</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="kr">end</span>
 </code></pre></div>
 <p>When you run your game, the following should be printed to the console:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>9 Color: B
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>8 Color: R
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>7 Color: B
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>6 Color: B
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>5 Color: B
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>4 Color: B
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>3 Color: B
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2 Color: B
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>1 Color: B
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Item #1 - Name: Steak, Price: $30
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Item #2 - Name: Ham, Price: $16
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Item #3 - Name: Cheese, Price: $16
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Item #4 - Name: Apple Pie, Price: $16
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Item #5 - Name: Bread, Price: $5
 </code></pre></div></p>
                 
               
@@ -449,13 +460,13 @@
           </a>
         
         
-          <a href="../mutable-objects/" title="Mutable Objects" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../advanced-custom-key/" title="Advanced Custom Key" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Mutable Objects
+                Advanced Custom Key
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

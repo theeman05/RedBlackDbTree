@@ -258,8 +258,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../guide/custom-comparator/" title="Custom Comparator" class="md-nav__link">
-      Custom Comparator
+    <a href="../guide/custom-key/" title="Custom Key" class="md-nav__link">
+      Custom Key
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/advanced-custom-key/" title="Advanced Custom Key" class="md-nav__link">
+      Advanced Custom Key
     </a>
   </li>
 
@@ -390,8 +402,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setcomparator" class="md-nav__link">
-    SetComparator
+  <a href="#setkey" class="md-nav__link">
+    SetKey
   </a>
   
 </li>
@@ -625,8 +637,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setcomparator" class="md-nav__link">
-    SetComparator
+  <a href="#setkey" class="md-nav__link">
+    SetKey
   </a>
   
 </li>
@@ -778,8 +790,8 @@
                   <h1>API Reference</h1>
                 
                 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>RedBlackDbTree is a utility module allowing sorting of objects based on their natural order or a given comparator. </p>
-<p>RedBlackDbTree has a special function called <a href="#redblackdbtreenew">RedBlackDbTree.new()</a> which is used to <a href="../guide/implimentation">instantiate</a> a new RedBlackDbTree Instance. This function can take a comparator as a parameter to compare and sort objects by. </p>
+<p>RedBlackDbTree is a utility module allowing sorting of objects based on their natural order or a given key function. </p>
+<p>RedBlackDbTree has a special function called <a href="#redblackdbtreenew">RedBlackDbTree.new()</a> which is used to <a href="../guide/implimentation">instantiate</a> a new RedBlackDbTree Instance. This function can take a key function as a parameter to compare and sort objects by. </p>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span><a href="#add">Add</a>(object: any): nil</span>
 </code></pre></div>
@@ -793,15 +805,15 @@
 <div class="highlight"><pre><span></span><code><span><a href="#removeall">RemoveAll</a>(...): nil</span>
 </code></pre></div>
 <p>&nbsp;&nbsp;Removes the given objects to the tree using <a href="#remove">Remove</a>.</p>
-<div class="highlight"><pre><span></span><code><span><a href="#setcomparator">SetComparator</a>(comparator : (object1 : any, object2 : any) -> number): nil</span>
+<div class="highlight"><pre><span></span><code><span><a href="#setkey">SetKey</a>(key: (object: any) -> {values: Comparable | {Value: Comparable, Descending: boolean}}): nil</span>
 </code></pre></div>
-<p>&nbsp;&nbsp;Sets the comparator of the tree, and <a href="#refresh">refreshes</a> its contents. If no comparator is given, the comparator will be set to default.</p>
+<p>&nbsp;&nbsp;Sets the key function of the tree, and <a href="#refresh">refreshes</a> its contents. If no key is given, the key will be set to default.</p>
 <div class="highlight"><pre><span></span><code><span><a href="#containsobject">ContainsObject</a>(object): nil</span>
 </code></pre></div>
 <p>&nbsp;&nbsp;Returns true if the tree contains the given object, false otherwise.</p>
-<div class="highlight"><pre><span></span><code><span><a href="#updateobject">UpdateObject</a>(object, dict{[property] = update}): nil</span>
+<div class="highlight"><pre><span></span><code><span><a href="#updateobject">UpdateObject</a>(object): nil</span>
 </code></pre></div>
-<p>&nbsp;&nbsp;Applies the updates given in the dictionary to the object.</p>
+<p>&nbsp;&nbsp;Alerts the tree of an update within the given object.</p>
 <div class="highlight"><pre><span></span><code><span><a href="#clear">Clear</a>(): nil</span>
 </code></pre></div>
 <p>&nbsp;&nbsp;Removes all objects from the tree, making it empty.</p>
@@ -855,24 +867,19 @@
 Creates a new, empty RedBlackDbTree using the natural ordering of its objects. </p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>The only objects who may be sorted by the default comparator are Strings, numbers or Metatables with comparison methods.</p>
+<p>The only objects who may be sorted by the default key function are strings, numbers or <a href="https://create.roblox.com/docs/scripting/luau/metatables">metatables</a> with comparison methods.</p>
 </div>
 <hr />
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">RedBlackDbTree</span><span class="o">.</span><span class="k">new</span><span class="p">(</span><span class="n">comparator</span><span class="p">:</span> <span class="p">(</span><span class="n">object1</span><span class="p">,</span> <span class="n">object2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">number</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RedBlackDbTree</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">RedBlackDbTree</span><span class="o">.</span><span class="k">new</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="p">(</span><span class="k">object</span><span class="p">:</span> <span class="k">any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">values</span><span class="p">:</span> <span class="n">Comparable</span> <span class="o">|</span> <span class="p">{</span><span class="n">Value</span><span class="p">:</span> <span class="n">Comparable</span><span class="p">,</span> <span class="n">Descending</span><span class="p">:</span> <span class="n">boolean</span><span class="p">}})</span>
 </code></pre></div>
-Creates a new, empty RedBlackDbTree, ordered according to the given <code>comparator</code>.</p>
-<p>The comparator should take two arguments representing the objects passed into it. The main 3 cases are listed below:</p>
-<ul>
-<li>
-<p>If <code>object1</code> is "smaller" than <code>object2</code>, a negative number should be returned</p>
-</li>
-<li>
-<p>If <code>object1</code> is "greater" than <code>object2</code>, a positive number should be returned</p>
-</li>
-<li>
-<p>If the two objects are considered equal, 0 should be returned</p>
-</li>
-</ul>
+Creates a new, empty RedBlackDbTree, ordered according to the given <code>key</code>.</p>
+<p>The key should take one argument representing the object passed into it to return the desired object values (as a Tuple).</p>
+<p>If a value should be sorted descending, the value may be turned into a dictionary where <code>Value</code> represents the value and <code>Descending</code> is the boolean stating that the value should be descending.</p>
+<p>A key example may be seen <a href="../guide/custom-key">here</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>RedBlackDbTree no longer uses a comparator, and uses a key-value system instead.</p>
+</div>
 <hr />
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
@@ -906,10 +913,10 @@ Removes <code>object</code> from the tree.</p>
 Removes all the given objects in the tuple <code>...</code></p>
 <p>If one object is given, it is assumed to be a table in which all values will be removed.</p>
 <hr />
-<h3 id="setcomparator">SetComparator<a class="headerlink" href="#setcomparator" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">SetComparator</span><span class="p">(</span><span class="n">comparator</span> <span class="p">:</span> <span class="p">(</span><span class="n">object1</span> <span class="p">:</span> <span class="k">any</span><span class="p">,</span> <span class="n">object2</span> <span class="p">:</span> <span class="k">any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">number</span><span class="p">)</span>
+<h3 id="setkey">SetKey<a class="headerlink" href="#setkey" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">SetKey</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="p">(</span><span class="k">object</span><span class="p">:</span> <span class="k">any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">values</span><span class="p">:</span> <span class="n">Comparable</span> <span class="o">|</span> <span class="p">{</span><span class="n">Value</span><span class="p">:</span> <span class="n">Comparable</span><span class="p">,</span> <span class="n">Descending</span><span class="p">:</span> <span class="n">boolean</span><span class="p">}})</span>
 </code></pre></div>
-Sets the comparator of the tree, and <a href="#refresh">refreshes</a> its contents. If no comparator is given, the comparator will be set to default.</p>
+Sets the key function of the tree, and <a href="#refresh">refreshes</a> its contents. If no key is given, the key will be set to default.</p>
 <hr />
 <h3 id="containsobject">ContainsObject<a class="headerlink" href="#containsobject" title="Permanent link">&para;</a></h3>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">ContainsObject</span><span class="p">(</span><span class="k">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">boolean</span>
@@ -917,23 +924,9 @@ Sets the comparator of the tree, and <a href="#refresh">refreshes</a> its conten
 Returns true if the tree contains <code>object</code>, false otherwise.</p>
 <hr />
 <h3 id="updateobject">UpdateObject<a class="headerlink" href="#updateobject" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">UpdateObject</span><span class="p">(</span><span class="k">object</span><span class="p">,</span> <span class="n">dict</span><span class="p">:</span> <span class="p">{[</span><span class="k">property</span><span class="p">]</span> <span class="o">=</span> <span class="n">update</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">UpdateObject</span><span class="p">(</span><span class="k">object</span><span class="p">)</span>
 </code></pre></div>
-<ul>
-<li>
-<p>Removes the <code>object</code> from the tree</p>
-</li>
-<li>
-<p>Applies the <code>update</code> to the <code>property</code> of the <code>object</code> for all properties in <code>dict</code></p>
-</li>
-<li>
-<p>Adds the updated <code>object</code> back into the tree at its correct location</p>
-</li>
-</ul>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>Only mutable objects may be updated this way. An error will be thrown otherwise.</p>
-</div>
+<p>Alerts the tree that an update has occured on the given object, and re-positions the object correctly.</p>
 <hr />
 <h3 id="clear">Clear<a class="headerlink" href="#clear" title="Permanent link">&para;</a></h3>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="bp">self</span><span class="p">:</span><span class="n">Clear</span><span class="p">()</span>
