@@ -2,42 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://theeman05.github.io/RedBlackDbTree/</loc>
-         <lastmod>2023-01-12</lastmod>
+         <lastmod>2023-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theeman05.github.io/RedBlackDbTree/api-reference/</loc>
-         <lastmod>2023-01-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://theeman05.github.io/RedBlackDbTree/guide/advanced-custom-key/</loc>
-         <lastmod>2023-01-12</lastmod>
+         <lastmod>2023-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theeman05.github.io/RedBlackDbTree/guide/array-retrieval/</loc>
-         <lastmod>2023-01-12</lastmod>
+         <lastmod>2023-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://theeman05.github.io/RedBlackDbTree/guide/custom-key/</loc>
-         <lastmod>2023-01-12</lastmod>
+         <loc>https://theeman05.github.io/RedBlackDbTree/guide/custom-comparator/</loc>
+         <lastmod>2023-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theeman05.github.io/RedBlackDbTree/guide/implimentation/</loc>
-         <lastmod>2023-01-12</lastmod>
+         <lastmod>2023-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theeman05.github.io/RedBlackDbTree/guide/installation/</loc>
-         <lastmod>2023-01-12</lastmod>
+         <lastmod>2023-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theeman05.github.io/RedBlackDbTree/guide/mutable-objects/</loc>
-         <lastmod>2023-01-12</lastmod>
+         <lastmod>2023-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

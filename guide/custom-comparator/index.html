@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://theeman05.github.io/RedBlackDbTree/guide/mutable-objects/">
+        <link rel="canonical" href="https://theeman05.github.io/RedBlackDbTree/guide/custom-comparator/">
       
       
-        <link rel="prev" href="../custom-comparator/">
+        <link rel="prev" href="../array-retrieval/">
       
       
-        <link rel="next" href="../../api-reference/">
+        <link rel="next" href="../mutable-objects/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Mutable Objects - RedBlackDbTree Documentation</title>
+        <title>Custom Comparator - RedBlackDbTree Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#utilizing-mutable-objects" class="md-skip">
+        <a href="#create-a-custom-comparator" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mutable Objects
+              Custom Comparator
             
           </span>
         </div>
@@ -300,20 +300,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../custom-comparator/" class="md-nav__link">
-        Custom Comparator
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -324,12 +310,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Mutable Objects
+          Custom Comparator
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Mutable Objects
+        Custom Comparator
       </a>
       
         
@@ -346,8 +332,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#utilizing-mutable-objects" class="md-nav__link">
-    Utilizing mutable objects:
+  <a href="#create-a-custom-comparator" class="md-nav__link">
+    Create a custom comparator:
   </a>
   
 </li>
@@ -356,6 +342,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mutable-objects/" class="md-nav__link">
+        Mutable Objects
+      </a>
     </li>
   
 
@@ -407,8 +407,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#utilizing-mutable-objects" class="md-nav__link">
-    Utilizing mutable objects:
+  <a href="#create-a-custom-comparator" class="md-nav__link">
+    Create a custom comparator:
   </a>
   
 </li>
@@ -431,58 +431,45 @@
   
 
 
-  <h1>Mutable Objects</h1>
+  <h1>Custom Comparator</h1>
 
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Assuming we have already <a href="../implimentation/">implimented RedBlackDbTree</a> as <code>RedBlackDbTree</code></p>
 </div>
-<p>In this example, we use <code>Part</code> objects.</p>
-<h3 id="utilizing-mutable-objects">Utilizing mutable objects:<a class="headerlink" href="#utilizing-mutable-objects" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">START_POSITION</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span> <span class="c1">-- The start position for our parts</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">local</span> <span class="n">PART_OFFSET</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">local</span> <span class="n">removePart</span><span class="p">,</span> <span class="n">movePart</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">local</span> <span class="n">tree</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kr">function</span> <span class="nf">createNewPart</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="kd">local</span> <span class="n">part</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">part</span><span class="p">.</span><span class="n">Anchored</span> <span class="o">=</span> <span class="kc">true</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">part</span><span class="p">.</span><span class="n">Position</span> <span class="o">=</span> <span class="n">position</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">part</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">name</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">part</span><span class="p">.</span><span class="n">Parent</span> <span class="o">=</span> <span class="n">workspace</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="kr">return</span> <span class="n">part</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="kr">end</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="kr">function</span> <span class="nf">partXComparator</span><span class="p">(</span><span class="n">part1</span><span class="p">,</span> <span class="n">part2</span><span class="p">)</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="kr">if</span> <span class="n">part1</span> <span class="o">==</span> <span class="n">part2</span> <span class="ow">or</span> <span class="n">part1</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="o">==</span> <span class="n">part2</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="kr">then</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="kr">return</span> <span class="mi">0</span>  <span class="c1">-- part1 equal to part2 or they have equal X positions</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="kr">elseif</span> <span class="n">part1</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="o">&lt;</span> <span class="n">part2</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">X</span> <span class="kr">then</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="kr">return</span> <span class="o">-</span><span class="mi">1</span> <span class="c1">-- part1 is more left than other</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="kr">else</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="kr">return</span> <span class="mi">1</span>  <span class="c1">-- part1 is more right than other</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="kr">end</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="kr">end</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">tree</span> <span class="o">=</span> <span class="n">RedBlackDbTree</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">partXComparator</span><span class="p">)</span> <span class="c1">-- Instantiate the tree with the comparator</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">removePart</span> <span class="o">=</span> <span class="n">createNewPart</span><span class="p">(</span><span class="s2">&quot;REMOVEME&quot;</span><span class="p">,</span> <span class="n">START_POSITION</span><span class="p">)</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="n">movePart</span> <span class="o">=</span> <span class="n">createNewPart</span><span class="p">(</span><span class="s2">&quot;MOVEME&quot;</span><span class="p">,</span> <span class="n">START_POSITION</span> <span class="o">+</span> <span class="n">PART_OFFSET</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="n">tree</span><span class="p">:</span><span class="n">AddAll</span><span class="p">(</span><span class="n">createNewPart</span><span class="p">(</span><span class="s2">&quot;P1&quot;</span><span class="p">,</span> <span class="n">START_POSITION</span><span class="p">),</span> <span class="n">createNewPart</span><span class="p">(</span><span class="s2">&quot;P2&quot;</span><span class="p">,</span> <span class="n">START_POSITION</span> <span class="o">+</span> <span class="n">PART_OFFSET</span><span class="p">),</span> <span class="n">movePart</span><span class="p">,</span> <span class="n">removePart</span><span class="p">)</span> <span class="c1">-- Add objects into the tree</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="n">tree</span><span class="p">:</span><span class="n">Remove</span><span class="p">(</span><span class="n">removePart</span><span class="p">)</span> <span class="c1">-- Remove `removePart`</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="n">tree</span><span class="p">:</span><span class="n">UpdateObject</span><span class="p">(</span><span class="n">movePart</span><span class="p">,</span> <span class="p">{</span><span class="n">Position</span> <span class="o">=</span> <span class="n">START_POSITION</span> <span class="o">-</span> <span class="n">PART_OFFSET</span><span class="p">})</span> <span class="c1">-- Move `movePart` left of P1</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="n">tree</span><span class="p">:</span><span class="n">InOrderPrint</span><span class="p">()</span>
+<p>In this example, we create a custom comparator which sorts in decending order.</p>
+<h3 id="create-a-custom-comparator">Create a custom comparator:<a class="headerlink" href="#create-a-custom-comparator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">tree</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kr">function</span> <span class="nf">decOrderComparator</span><span class="p">(</span><span class="n">object1</span><span class="p">,</span> <span class="n">object2</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="kr">if</span> <span class="n">object1</span> <span class="o">&gt;</span> <span class="n">object2</span> <span class="kr">then</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="kr">return</span> <span class="o">-</span><span class="mi">1</span> <span class="c1">-- object1 is larger than object2</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="kr">elseif</span> <span class="n">object1</span> <span class="o">&lt;</span> <span class="n">object2</span> <span class="kr">then</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="kr">return</span> <span class="mi">1</span>  <span class="c1">-- object1 is smaller than object2</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="kr">else</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="kr">return</span> <span class="mi">0</span>  <span class="c1">-- object1 is equal to object2</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="kr">end</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="kr">end</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">tree</span> <span class="o">=</span> <span class="n">RedBlackDbTree</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">decOrderComparator</span><span class="p">)</span> <span class="c1">-- Instantiate the tree with the comparator</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">tree</span><span class="p">:</span><span class="n">AddAll</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">109</span><span class="p">)</span> <span class="c1">-- Add objects into the tree</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">tree</span><span class="p">:</span><span class="n">AddAll</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">})</span> <span class="c1">-- We can alternatively add objects like this</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">tree</span><span class="p">:</span><span class="n">Remove</span><span class="p">(</span><span class="mi">109</span><span class="p">)</span> <span class="c1">-- Remove an object</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">tree</span><span class="p">:</span><span class="n">InOrderPrint</span><span class="p">()</span>
 </code></pre></div>
 <p>When you run your game, the following should be printed to the console:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>MOVEME Color B
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>P1 Color B
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>P2 Color B
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>9 Color: B
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>8 Color: R
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>7 Color: B
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>6 Color: B
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>5 Color: B
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>4 Color: B
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>3 Color: B
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2 Color: B
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>1 Color: B
 </code></pre></div></p>
-<p>Since we updated <code>movePart</code> to be left of P1, it is now considered the "smallest".</p>
 
 
 
