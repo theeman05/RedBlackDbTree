@@ -1,0 +1,10 @@
+{
+  "name": "RedBlackDbTree",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$path": "src"
+    }
+  }
+}
